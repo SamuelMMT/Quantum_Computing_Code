@@ -1,7 +1,7 @@
 # Quantum Computing Repo
 
 ## Introduction
-I am passionate about Quantum Computing, Quantum Metrology, and Error Correction, I have a foundation in electrical engineering and applied physics. With a focus on quantum components and control electronics. Eager to connect with fellow enthusiasts, researchers, and professionals driving progress in quantum technology. Let's explore the exciting possibilities of the quantum realm together!
+I am passionate about Quantum Computing, Quantum Metrology, and Error Correction, I have a foundation in electrical engineering and applied physics. With a focus on quantum components and control electronics. Eager to connect with fellow enthusiasts, researchers, and professionals driving progress in quantum technology. Feel free to reach out!
 
 ## Interesting Papers/Topics:
 ### Quantum Random Number Generation
