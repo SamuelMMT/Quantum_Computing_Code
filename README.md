@@ -18,7 +18,7 @@ An amazing book for anyone trying to get things started. Especially the sections
 Linear Algebra rocks!
 [Amazon Link](https://www.amazon.de/-/en/Jack-D-Hidary-dp-3030832732/dp/3030832732)
 
-## Projects and Contributions
+## Planned Projects and Contributions
 1. Quantum Algorithms
 2. QRNG
 3. Simulating Quantum Systems
