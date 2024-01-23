@@ -1,7 +1,7 @@
 #unit test for qubit.py
 
 import pytest
-from simulator.qubit import Qubit
+from src.simulator.qubit import Qubit
 import numpy as np
 
 class TestQubit:
@@ -16,10 +16,10 @@ class TestQubit:
         qubit = Qubit(1 / np.sqrt(2), 1 / np.sqrt(2))
         assert np.isclose(abs(qubit.alpha)**2 + abs(qubit.beta)**2, 1)
 
-    def test_bloch_representation(self):
+    def test_bloch_sphere(self):
         # Test the Bloch sphere representation
         qubit = Qubit(1, 0)  # |0> state
-        x, y, z = qubit.bloch_representation()
+        x, y, z = qubit.bloch_sphere()
         assert np.isclose(x, 0) and np.isclose(y, 0) and np.isclose(z, 1)
 
     def test_ket_representation(self):

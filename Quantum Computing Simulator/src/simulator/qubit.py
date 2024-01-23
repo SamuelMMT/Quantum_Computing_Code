@@ -25,6 +25,14 @@ class Qubit:
     
     def ket_representation(self):
         #Dirac-Notation
-        alpha_repr = f"{self.alpha: .2f}|0⟩ "
-        beta_repr = f"+ {self.beta:.2f}|1⟩" if self.beta >= 0 else f"- {-self.beta:.2f}|1⟩"
-        return alpha_repr + beta_repr
+        # Format alpha with precision and exclude the imaginary part if it's zero
+        alpha_repr = f"{self.alpha.real:.2f}" if self.alpha.imag == 0 else f"{self.alpha:.2f}"
+        alpha_repr += "|0⟩ "
+        
+        # Format beta similarly
+        beta_repr = f"{self.beta.real:.2f}" if self.beta.imag == 0 else f"{self.beta:.2f}"
+        beta_repr += "|1⟩"
+        
+        # Construct the full ket representation
+        ket_repr = alpha_repr + "+ " + beta_repr if self.beta >= 0 else "- " + beta_repr
+        return ket_repr.strip()
