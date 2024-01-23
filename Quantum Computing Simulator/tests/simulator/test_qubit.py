@@ -1,8 +1,16 @@
 #unit test for qubit.py
+import os
 import sys
 import pytest
-from src.simulator.qubit import Qubit
 import numpy as np
+
+# Add the src directory to sys.path
+current_dir = os.path.dirname(os.path.abspath(__file__))
+src_dir = os.path.join(current_dir, '..', '..', 'src')
+sys.path.insert(0, src_dir)
+
+from simulator.qubit import Qubit
+
 
 class TestQubit:
     def test_initialization(self):
