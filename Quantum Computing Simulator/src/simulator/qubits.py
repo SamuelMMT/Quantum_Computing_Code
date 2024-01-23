@@ -1,6 +1,6 @@
 import numpy as np
 
-class qubit:
+class Qubit:
     def __init__(self, alpha = 1, beta = 0):
         self.alpha = complex(alpha)
         self.beta = (beta)
