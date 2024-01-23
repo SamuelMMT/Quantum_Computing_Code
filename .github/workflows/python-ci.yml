@@ -21,4 +21,6 @@ jobs:
         cd Quantum\ Computing\ Simulator
         pip install -e .
     - name: Run tests
-      run: pytest Quantum\ Computing\ Simulator/tests/
+      run: |
+        cd Quantum\ Computing\ Simulator
+        pytest tests/

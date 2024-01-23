@@ -1,7 +1,7 @@
 #unit test for qubit.py
-
+import sys
 import pytest
-from simulator.qubit import Qubit
+from src.simulator.qubit import Qubit
 import numpy as np
 
 class TestQubit:
