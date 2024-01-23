@@ -9,8 +9,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Set PYTHONPATH
-      run: echo "PYTHONPATH=$PYTHONPATH:$(pwd)/Quantum\ Computing\ Simulator/src" >> $GITHUB_ENV
     - name: Set up Python 3.12
       uses: actions/setup-python@v2
       with:
@@ -18,8 +16,10 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
+        pip install pytest
         if [ -f ./Quantum\ Computing\ Simulator/requirements.txt ]; then pip install -r ./Quantum\ Computing\ Simulator/requirements.txt; fi
     - name: Run tests
       run: |
-        PYTHONPATH=./Quantum\ Computing\ Simulator/src pytest ./Quantum\ Computing\ Simulator/tests/
-  
+        pytest ./Quantum\ Computing\ Simulator/tests/
+      env:
+        PYTHONPATH: ${{ github.workspace }}/Quantum\ Computing\ Simulator/src
