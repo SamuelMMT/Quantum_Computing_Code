@@ -10,7 +10,7 @@ setup(
         'matplotlib'
     ],
     tests_require=[
-        'pytest'
+        'pytest',
         # add other test dependencies here
     ],
 )
