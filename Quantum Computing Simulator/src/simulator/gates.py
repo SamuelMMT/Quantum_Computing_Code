@@ -1,14 +1,32 @@
 import numpy as np
 
-def x_gate():
-    "Apply X-Gate in the form of a matrix"
-    return np.array([[0,1],[1,0]])
+class XGate:
+    def get_matrix(self):
+        return np.array([[0, 1], [1, 0]])
+    def get_animation_function(self, total_frames):
+        # Return a function that describes the gate's effect over time
+        def apply_x_gate_over_time(frame):
+            angle = np.pi * (frame / total_frames)
+            x = np.sin(angle)
+            y = 0
+            z = np.cos(angle)
+            return x, y, z
+        return apply_x_gate_over_time
 
-def y_gate():
-    return np.array([[0, -1j],[1j,0]])
+class YGate:
+    def get_matrix(self):
+        return np.array([[0, -1j], [1j, 0]])
 
-def z_gate():
-    return np.array([[1,0],[0,-1]])
+    #add animation
 
-def h_gate():
-    return np.array([[1,1],[1,-1]])/ np.sqrt(2)
+class ZGate:
+    def get_matrix(self):
+        return np.array([[1, 0], [0, -1]])
+
+    #add animation
+
+class HGate:
+    def get_matrix(self):
+        return np.array([[1, 1], [1, -1]]) / np.sqrt(2)
+
+    #add animation
