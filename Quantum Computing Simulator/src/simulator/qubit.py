@@ -1,4 +1,6 @@
 import numpy as np
+import gates
+
 
 class Qubit:
     def __init__(self, alpha = 1, beta = 0):
@@ -36,3 +38,10 @@ class Qubit:
         # Construct the full ket representation
         ket_repr = alpha_repr + "+ " + beta_repr if self.beta >= 0 else "- " + beta_repr
         return ket_repr.strip()
+    
+    def apply_gate(self, gate):
+        "Apply a quantum gate to the qubit"
+        state_vector = np.array([self.alpha, self.beta])
+        new_state_vector = np.dot(gate, state_vector)
+        self.alpha, self.beta = new_state_vector[0], new_state_vector[1]
+        self.normalize()
