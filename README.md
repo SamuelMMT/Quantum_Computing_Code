@@ -9,7 +9,7 @@ H-Gates anyone?
 [Quantum Random Number Generation Xiongfeng Ma et. al. 2016](https://www.nature.com/articles/npjqi201621#citeas)
 
 
-## Books I Worked Through and Can Recommend:
+## Books I Can Recommend:
 ### The QC-"Bible" by Isaac L. Chuang & Michael Nielsen
 [Amazon Link](https://www.amazon.de/-/en/Isaac-L-Chuang-Michael-Nielsen/dp/1107002176)
 
